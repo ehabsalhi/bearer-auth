@@ -9,11 +9,11 @@ const postgres_url = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : proces
 
 const sequelize = new Sequelize(postgres_url , {})
 
-const User = sequelize.define('userlab' , {
+const User = sequelize.define('userlab1' , {
      username:{
           type : DataTypes.STRING,
           allowNull : false,
-          unique : true
+          
      },
      password : {
           type : DataTypes.STRING,
