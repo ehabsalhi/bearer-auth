@@ -17,7 +17,7 @@ describe('server test' , () => {
      })
 
      it('signup test' , async () =>{
-          const name = 'ehab_test103'
+          const name = 'ehab_test105'
           const res = await muke.post('/signup').send({
                username: name,
                password : '123123'
