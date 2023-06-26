@@ -17,12 +17,12 @@ describe('server test' , () => {
      })
 
      it('signup test' , async () =>{
-          const name = 'ehab_test105'
+          const name = 'ehab_test107'
           const res = await muke.post('/signup').send({
                username: name,
                password : '123123'
           })
-          console.log(JSON.parse(res.text).message.username);
+          // console.log(JSON.parse(res.text).message.username);
 
           expect(res.statusCode).toBe(201)
           expect(JSON.parse(res.text).message.username).toBe(name)
