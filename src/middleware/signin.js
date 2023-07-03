@@ -1,6 +1,8 @@
 const base64 = require('base-64')
 const bcrybt = require('bcrypt')
-const { User } = require('../moduls')
+const { User } = require('../moduls/user.model')
+// const { User } = require('../moduls')
+
 
 
 module.exports = async(req , res , next) => {

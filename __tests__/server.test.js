@@ -1,10 +1,10 @@
 const supertest = require('supertest')
 const {app} = require('../src/server')
-const { sequelize } = require('../src/moduls')
+// const { sequelize } = require('../src/moduls')
 const muke = supertest(app)
 require('dotenv').config()
 const base64 = require("base-64")
-
+const { sequelize } = require('../src/moduls')
 
 
 describe('server test' , () => {
@@ -17,7 +17,7 @@ describe('server test' , () => {
      })
 
      it('signup test' , async () =>{
-          const name = 'ehab_test108'
+          const name = 'ehab_test112'
           const res = await muke.post('/signup').send({
                username: name,
                password : '123123'
@@ -29,7 +29,7 @@ describe('server test' , () => {
 
      })
 
-    const base = base64.encode('ehab_test100:123123') 
+    const base = base64.encode('ehab_test112:123123') 
      it('signin test' , async () =>{
           const res = await muke.post('/signin').set('Authorization', `Basic ${base}`)
           // console.log(res);
